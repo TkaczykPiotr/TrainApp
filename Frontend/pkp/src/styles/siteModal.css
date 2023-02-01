@@ -1,0 +1,103 @@
+/***    Tło    ***/
+
+#mainBoxB{
+margin-left: 5%;
+height: 820px;
+}
+/***    Box góra    ***/
+#mainBoxA{
+height: 65vh;
+width: 145vh;
+background: #444;
+border-radius: 50px;
+
+}
+/***    Dolny Box     ***/
+#mainBoxC{
+height: 15vh;
+width: 145vh;
+background: #444;
+border-radius: 50px;
+
+}
+/***    Dolny Box-formularz     ***/
+#form111{
+text-align: center;
+margin: 1%;
+background: #696969;
+float: center;
+width: 70%;
+border-radius: 10px;
+transform: translate(20%, 10%);
+text-align: center;
+}
+/***    Dolny Box-btn    ***/
+#btnOK1{
+    top: 100%;
+    left: 100%;
+    margin-right: 2%;
+    transform: translate(20%, 10%);
+    text-align: center;
+}
+#label11{
+    top: 100%;
+    left: 100%;
+    margin-right: 2%;
+    transform: translate(20%, 10%)
+}
+#btnOK1:hover {
+    background: 	#7CFC00;
+    transition: all .5s
+}
+
+/***   Boxy w głównym boxsie  ***/
+#boxA{
+height: 10vh;
+width: 10vh;
+background: #696969;
+border-radius: 10px;
+margin: 1%;
+float: left;
+border: #fff;
+}
+
+
+
+div.a {
+  text-align: center;
+}
+#row11{
+margin-left: 1%;
+text-align: center;
+}
+
+/***   butony w głównym boxsie  ***/
+#btnK2 {
+    height: 5vh;
+    display: block;
+    width: 100%;
+    border: none;
+    background: #BDB76B;
+    color: #000;
+    border-radius: 290px;
+    text-align: center;
+}
+
+#btnK2:hover {
+    background: 	#7CFC00;
+    transition: all .5s
+}
+
+
+
+
+
+
+
+
+
+/***    wyśrodkowanie divów    ***/
+#wrapper1 {
+width:300px;
+margin: 0 auto;
+}
