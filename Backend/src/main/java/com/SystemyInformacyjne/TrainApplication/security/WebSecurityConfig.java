@@ -31,8 +31,6 @@ import java.io.IOException;
 @Configuration
 @EnableWebSecurity
 @EnableGlobalMethodSecurity(
-        // securedEnabled = true,
-        // jsr250Enabled = true,
         prePostEnabled = true)
 public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     @Autowired
@@ -70,12 +68,6 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
         http
                 .cors().and().csrf().disable()
-//                .authorizeRequests()
-//                .antMatchers("/apis/**").hasRole("USER").and()
-//                .exceptionHandling().authenticationEntryPoint(unauthorizedHandler).and()
-//                .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS).and()
-//                .authorizeRequests()
-//                .antMatchers("/apis").permitAll().and()
                 .antMatcher("/**")
                 .authorizeRequests()
                 .antMatchers("/api/auth/**", "/api/test/**","/api/connection/**", "/api/payment/**", "/api/ticket/**", "/api/site/**").permitAll()
@@ -89,37 +81,13 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                     @Override
                     public void onAuthenticationSuccess(HttpServletRequest request, HttpServletResponse response,
                                                         Authentication authentication) throws IOException, ServletException {
-
                         CustomOAuth2User oauthUser = (CustomOAuth2User) authentication.getPrincipal();
-
                         ResponseEntity<?> entity= userService.processOAuthPostLogin(oauthUser, authentication);
-                       // userService.processOAuthPostLogin(oauthUser);
-
                         System.out.println(entity.getBody());
                         response.sendRedirect("/home");
 
                     }
                 });
-                    //.userInfoEndpoint()
-                    //.userService(auth2UserService);
-//                    .authorizationEndpoint()
-//                    .baseUri("/apis/oauth2/authorization")
-//                    .and()
-//                    .redirectionEndpoint()
-//                    .baseUri("/apis/home/*");
-
-
-
-//                .cors().and().csrf().disable()
-//                .exceptionHandling().authenticationEntryPoint(unauthorizedHandler).and()
-//                .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS).and()
-//                .authorizeRequests()
-//                .antMatchers("/api/auth/**")
-//                .permitAll()
-//                .antMatchers("/api/test/**").permitAll()
-//                .antMatchers("/api/connection/**").permitAll()
-//                .anyRequest().authenticated();
-
 
         http.addFilterBefore(authenticationJwtTokenFilter(), UsernamePasswordAuthenticationFilter.class);
     }

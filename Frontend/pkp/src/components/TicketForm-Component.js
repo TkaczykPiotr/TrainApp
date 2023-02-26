@@ -225,7 +225,3 @@ const { showSite } = this.state;
 }
 
 export default withNavigation(TicketForm)
-
-//{showSite && (
-//                  <SiteModal></SiteModal>
-//                )}

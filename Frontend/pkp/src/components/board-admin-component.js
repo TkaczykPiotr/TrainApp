@@ -10,7 +10,6 @@ class BoardAdmin extends Component {
         super(props)
 
         this.state = {
-            //id: this.props.match.params.id,
             id: '',
             stationStarting: '',
             timeStarting: '',
@@ -34,16 +33,6 @@ class BoardAdmin extends Component {
 
         this.updateConnection = this.updateConnection.bind(this);
     }
-
-//    componentDidMount(){
-//        ConnectionService.getEmployeeById(this.state.id).then( (res) =>{
-//            let connection = res.data;
-//            this.setState({firstName: employee.firstName,
-//                lastName: employee.lastName,
-//                emailId : employee.emailId
-//            });
-//        });
-//    }
 
     updateConnection = (e) => {
         e.preventDefault();
@@ -95,10 +84,6 @@ class BoardAdmin extends Component {
     trainHandler= (event) => {
                        this.setState({train: event.target.value});
           }
-
-//    cancel(){
-//        this.props.history.push('/employees');
-//    }
 
     render() {
         return (

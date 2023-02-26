@@ -2,7 +2,6 @@ import React, { Component } from "react";//cd
 import { Layout } from 'antd';
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router";
-import { RouteComponentProps, withRouter } from 'react-router-class-tools';
 import AuthService from "../services/auth-service";
 import "../styles/styles.css";
 import TicketService from "../services/ticketService";

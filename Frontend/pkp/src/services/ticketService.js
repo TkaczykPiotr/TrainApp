@@ -44,8 +44,6 @@ class TicketService {
     }
 
     updateTicketSecond(ticketId, ticket){
-//    const header = new Headers();
-//    header.append('Access-Control-Allow-Origin', '*');
         return axios.put(Ticket_API_BASE_URL + '/second/' +  ticketId, ticket);
     }
 

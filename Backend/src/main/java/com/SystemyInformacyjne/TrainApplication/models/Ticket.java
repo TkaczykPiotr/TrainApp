@@ -27,19 +27,6 @@ public class Ticket {
     @NotBlank
     private String userSurname;
 
-
-//    @ManyToMany(fetch = FetchType.LAZY)
-//    @JoinTable(	name = "ticket_payment",
-//            joinColumns = @JoinColumn(name = "ticket_id"),
-//            inverseJoinColumns = @JoinColumn(name = "payment_id"))
-//    private Set<Payment> payments = new HashSet<>();
-//
-//    @ManyToMany(fetch = FetchType.LAZY)
-//    @JoinTable(	name = "ticket_reduction",
-//            joinColumns = @JoinColumn(name = "ticket_id"),
-//            inverseJoinColumns = @JoinColumn(name = "reduction_id"))
-//    private Set<Reduction> reductions = new HashSet<>();
-
     @NotBlank
     private String dates;
     @NotBlank

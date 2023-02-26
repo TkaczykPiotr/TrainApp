@@ -51,21 +51,6 @@ await axios.post("http://localhost:8080/api/payment/charge", "", {         heade
 
    }).catch((error) => {
    alert(error);
-//      const userId = AuthService.getCurrentUserId();
-//      const ticketId = TicketService.getCurrentTicketId();
-//      let payment = {
-//      amount: count,
-//      name: 'card',
-//      status: 'no-paid'};
-//      PaymentService.createPayment(payment);
-//      const paidId = PaymentService.getCurrentPaymentId();
-//      let ticket = {
-//      payments: paidId,
-//      account: userId,
-//      };
-//      TicketService.updateTicketThird(ticket, ticketId)
-//      TicketService.removeTicket();
-//      navigate('/user');
    });
 
 }
